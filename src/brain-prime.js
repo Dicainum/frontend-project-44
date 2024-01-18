@@ -1,22 +1,29 @@
-import startEngine from '../index.js';
-import { generateQuestionAndAnswer } from '../utils.js';
+import startEngine from './index.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const minRange = 1;
-const maxRange = 50;
+const getRandomNumber = (min, max) => Math.random() * (max - min) + min;
+const limit = {
+  min: 0,
+  max: 1000,
+};
 
-const checkIsPrime = (num) => {
+const isPrime = (num) => {
   for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
     if (num % i === 0) return false;
   }
   return num > 1;
 };
 
-const startRound = () => {
-  const [question, correctAnswer] = generateQuestionAndAnswer(minRange, maxRange, checkIsPrime);
-  return [question, correctAnswer];
+const getQuAndAn = () => {
+  const expression = getRandomNumber(limit.min, limit.max);
+  const answer = isPrime(expression) ? 'no' : 'yes';
+
+  return {
+    answer,
+    expression,
+  };
 };
 
-const runBrainPrimeGame = () => startEngine(rule, startRound);
+const runBrainPrimeGame = () => startEngine(rule, getQuAndAn);
 
 export default runBrainPrimeGame;
