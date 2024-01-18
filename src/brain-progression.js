@@ -1,4 +1,4 @@
-import startGame from '../index.js';
+import startEngine from '../index.js';
 import { generateRandomNumber } from '../utils.js';
 
 const rule = 'What number is missing in the progression?';
@@ -27,6 +27,6 @@ const startRound = () => {
   return [question, correctAnswer];
 };
 
-const runBrainProgressionGame = () => startGame(rule, startRound);
+const runBrainProgressionGame = () => startEngine(rule, startRound);
 
 export default runBrainProgressionGame;
