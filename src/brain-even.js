@@ -1,4 +1,4 @@
-import startEngine from './engine.js';
+import startEngine from './index.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 const getRandomNum = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
