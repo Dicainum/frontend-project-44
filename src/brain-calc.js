@@ -21,7 +21,7 @@ const calculateExpr = (firstNum, secondNum, oper) => {
     case operator.prod:
       return firstNum * secondNum;
     default:
-      throw new Error(`Unknown operator: '${oper}'!`);
+      return (`Unknown '${oper}'!`);
   }
 };
 
