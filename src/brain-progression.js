@@ -1,5 +1,5 @@
-import startEngine from '../index.js';
-import { generateRandomNumber } from '../utils.js';
+import startEngine from './index.js';
+import { generateRandomNumber } from './helps.js';
 
 const rule = 'What number is missing in the progression?';
 const minLength = 5;
@@ -21,10 +21,13 @@ const startRound = () => {
   const length = generateRandomNumber(minLength, maxLength);
   const hiddenIndex = generateRandomNumber(2, length - 1);
 
-  const question = getProgression(startNumber, step, length, hiddenIndex);
-  const correctAnswer = (startNumber + step * hiddenIndex).toString();
+  const expression = getProgression(startNumber, step, length, hiddenIndex);
+  const answer = (startNumber + step * hiddenIndex).toString();
 
-  return [question, correctAnswer];
+  return {
+    answer,
+    expression,
+  };
 };
 
 const runBrainProgressionGame = () => startEngine(rule, startRound);
