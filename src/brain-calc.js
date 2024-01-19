@@ -45,3 +45,4 @@ const getCalcGameOptions = () => {
 const startCalcGame = () => startEngine(rule, getCalcGameOptions);
 
 export default startCalcGame;
+
