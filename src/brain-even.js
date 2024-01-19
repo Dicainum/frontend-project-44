@@ -25,4 +25,3 @@ const getEvenGameOptions = () => {
 const startEvenGame = () => startEngine(rule, getEvenGameOptions);
 
 export default startEvenGame;
-
