@@ -48,4 +48,3 @@ brain-progression
 ```
 brain-prime
 ```
-## Игра: "Проверка на четность"
