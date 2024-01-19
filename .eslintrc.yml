@@ -8,8 +8,6 @@ parserOptions:
   ecmaVersion: latest
 
 rules:
-  eol-last: ["error", "never"]
-  "no-multiple-empty-lines": [2, {"max": 99999, "maxEOF": 0}]
   no-console: 0
   import/extensions:
     - error
