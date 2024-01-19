@@ -1,7 +1,7 @@
 import startEngine from './index.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const getRandomNumber = (min, max) => Math.random() * (max - min) + min;
+const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 const limit = {
   min: 0,
   max: 1000,
