@@ -16,7 +16,7 @@ const isPrime = (num) => {
 
 const getQuAndAn = () => {
   const expression = getRandomNumber(limit.min, limit.max);
-  const answer = isPrime(expression) ? 'no' : 'yes';
+  const answer = isPrime(expression) ? 'yes' : 'no';
 
   return {
     answer,
